@@ -8,7 +8,8 @@
 <body>
     <ul>
         <h2>TOTES LES PELICULES</h2>
-        <?php foreach ($films as $film) : ?>
+        <?php global $films;
+        foreach ($films as $film) : ?>
         <li><?= $film['name'] ?> (<?= $film['year'] ?> by <?= $film['director'] ?>)</li>
         <?php endforeach; ?>
 
