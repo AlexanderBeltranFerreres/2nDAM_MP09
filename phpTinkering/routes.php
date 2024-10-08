@@ -1,8 +1,8 @@
 <?php
 //definim les rutes
 return [
-    '/'=> '../app/index.php',
-    '/index.php' => '../app/index.php',
+    '/'=> '../app/index_OLD.php',
+    '/index_OLD.php' => '../app/index_OLD.php',
     '/index' => '../app/index.html',
-    '/home' => '../app/index.php',
+    '/home' => '../app/index_OLD.php',
 ];
