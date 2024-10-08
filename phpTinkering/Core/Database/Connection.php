@@ -16,6 +16,7 @@ class Connection{
             );
         } catch (\Exception $e) {
                 echo 'Errpr de connexió a la base de dades.';
+                echo 'Error: ' . $e->getMessage();
         }
     }
 }

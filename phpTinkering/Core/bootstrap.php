@@ -13,7 +13,7 @@ $routes = require '../routes.php';
 
 //Carreguem les variables d'entorn de forma inmutable
 
-$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load(); //Carreguem var
 
 //Enllaém l'arxu config al contenidor com a config on tenim les variables
@@ -26,4 +26,4 @@ App::bind('data', new Database(
 ));
 
 //Enllaçem instància
-App::bind('routes', (new Route())->define(routes));
+App::bind('router', (new Route())->define(routes));

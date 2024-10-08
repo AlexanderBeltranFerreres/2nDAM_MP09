@@ -6,12 +6,12 @@ use http\Exception\RuntimeException;
 
 class Route{
 
-    protected $routes;
+    protected $routes = [];
 
     //Creem funcio per afegir a l'array
     public function register($route){
         $this->routes[] = $route;
-        return $this;
+       // return $this;
     }
 
     //Funcio per rebre un array de rutes i assignar a la propietat rutes
