@@ -2,6 +2,7 @@
 
 use Code\App;
 
+//phpinfo();
 require '../vendor/autoload.php';
 
 //Carreguem bootstrap
