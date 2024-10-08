@@ -1,14 +1,12 @@
 <?php
-//fitxer credencials base dades
+//fitxer credencials base dades utilitzem environment per posar les credencials
 return [
     'database' => [
-        'user'=>$_ENV['DB_USERNAME'],
-        'password'=>$_ENV['DB_PASSWORD'],
+        'user' => $_ENV['DB_USERNAME'],
+        'password' => $_ENV['DB_PASSWORD'],
         'databasetype' => $_ENV['DB_CONNECTION'],
         'host' => $_ENV['DB_HOST'],
-        'port' => $_ENV['DB_PORT'],
-        'charset' => $_ENV['DB_CHARSET'],
-        'prefix' => $_ENV['DB_PREFIX']
+        'name' => $_ENV['DB_DATABASE'],
     ]
 ];
 
