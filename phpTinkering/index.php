@@ -1,6 +1,6 @@
 <?php
 require "app/index.php";
-require "resources/views/index.blade.php";
+require "resources/views/index_OLD.blade.php";
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,28 +1,51 @@
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-</head>
-<body>
-    <ul>
-        <h2>TOTES LES PELICULES</h2>
-        <?php global $films;
-        foreach ($films as $film) : ?>
-        <li><?= $film['name'] ?> (<?= $film['year'] ?> by <?= $film['director'] ?>)</li>
-        <?php endforeach; ?>
+<?php require "layout/html_header.blade.php"; ?>
+<?php require "layout/nav.blade.php"; ?>
 
-        <h2>PELICULES FILTRADES PER FUNCIO</h2>
-        <?php foreach (filtreByDirector($films, "Denis Villenueve") as $film ): ?>
-        <li><?= $film['name'] ?> (<?= $film['year'] ?> by <?= $film['director'] ?>)</li>
-        <?php endforeach; ?>
+<h1>
+    <?php
+    echo $greeting . " World!<br>";
+    echo "Resultat: " . $a + $b . "<br>";
+    ?>
 
-        <h2>PELICULES FILTRADES A PARTIR DEL 2000</h2>
-        <?php foreach (filtreAny($films, "2000") as $film ): ?>
-        <li><?= $film['name'] ?> (<?= $film['year'] ?> by <?= $film['director'] ?>)</li>
+</h1>
+<p>Llista de pelis:</p>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">
+                Id
+            </th>
+            <th scope="col">
+                Film Name
+            </th>
+            <th scope="col">
+                Director
+            </th>
+            <th scope="col">
+                releaseYear
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($films as $film): ?>
+        <tr>
+            <td>
+                    <?=$film->id;?>
+            </td>
+            <td>
+                    <?=$film->name;?>
+            </td>
+            <td>
+                    <?=$film->director;?>
+            </td>
+            <td>
+                    <?=$film->year;?>
+            </td>
+        </tr>
         <?php endforeach; ?>
-    </ul>
-    <p>Agafem la peli 3: <?= $films[2]['name'] ?></p>
-</body>
-</html>
+        </tbody>
+    </table>
+</div>
+
+<?php require "layout/footer.blade.php"; ?>
