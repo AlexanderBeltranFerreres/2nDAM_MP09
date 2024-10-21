@@ -1,7 +1,7 @@
 <?php
  //Fitxer crear la connexió a la base de dades
 
-namespace Code\Database;
+namespace Core\Database;
 
 use PDO;
 use PDOException;
@@ -20,5 +20,3 @@ class Connection{
         }
     }
 }
-
-

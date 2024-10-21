@@ -1,29 +1,29 @@
 <?php
-//bootstrap es responsable de configurae i inicialitzar l'entorn de l'aplicació.
-//carregar kes conbfiguracions, inicialitzar dependències com la base de dades
+//bootstrap es responsable de configurar i inicialitzar l'entorn de l'aplicació.
+//carregar les configuracions, inicialitzar dependències com la base de dades i el router
+require __DIR__ . '/../vendor/autoload.php';
 
-use Code\Route;
-use Core\App;
-use Dotenv\Dotenv; //Carregar var de l'entorn
-use Core\Database\Connection; //fer connexions
-use Core\Database\Database; //operacions de database
 
-//Carreguem les rutes
+use Dotenv\Dotenv; //carregar les variables d'entorn
+use Core\App; //importar contenidor de dependències
+use Core\Database\Connection; //importem la classe connection per fer la connexió
+use Core\Database\Database; //importem database per fer les operacions
+use Core\Route; //carregar la gestió per a l'enrutament
+
+//carregarem les rutes
 $routes = require '../routes.php';
 
-//Carreguem les variables d'entorn de forma inmutable
-
+//carreguem les variables d'entorn de forma immutable
 $dotenv = Dotenv::createImmutable(__DIR__.'/..');
-$dotenv->load(); //Carreguem var
+$dotenv->load(); //carreguem variables
 
-//Enllaém l'arxu config al contenidor com a config on tenim les variables
-
+//enllacem l'arxiu config al contenidor com a config on tenim les variables d'entorn
 App::bind('config', require '../config.php');
 
-//enllaém l'arxiu config
-App::bind('data', new Database(
+//enllacem la instancia database
+App::bind('database', new Database(
     Connection::make(App::get('config')['database'])
 ));
 
-//Enllaçem instància
-App::bind('router', (new Route())->define(routes));
+//enllacem la instancia rutes
+App::bind('router', (new Route())->define($routes));
