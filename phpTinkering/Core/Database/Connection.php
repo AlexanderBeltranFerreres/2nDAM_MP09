@@ -1,22 +1,22 @@
 <?php
- //Fitxer crear la connexió a la base de dades
-
+//Fitxer per crear la connexió a la base de dades
 namespace Core\Database;
 
-use PDO;
-use PDOException;
+use PDO; //importem classe PDO per interactuar en les bases de dades
 
-//classe PDO; //Importem classe PDO
-class Connection{
-    public static function make($config) {
-        try{
+class Connection
+{
+    //creem instancia de la classe PDO per establir la connexió a la base de dades
+    public static function make($config)
+    {
+        try {
             return new PDO(
                 $config['databasetype'] . ':host=' . $config['host'] .
-                ';dbname=' . $config['name'] , $config['user'] , $config['password']
+                ';dbname=' . $config['name'], $config['user'] , $config['password']
             );
         } catch (\Exception $e) {
-                echo 'Errpr de connexió a la base de dades.';
-                echo 'Error: ' . $e->getMessage();
+            echo 'Error de connexió a la base de dades.';
+            echo 'Error: ' . $e->getMessage();
         }
     }
 }

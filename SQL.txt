@@ -1,0 +1,21 @@
+create table f1_drivers
+(
+    id                int auto_increment
+        primary key,
+    driver_name       varchar(255)  not null,
+    team_name         varchar(255)  not null,
+    nationality       varchar(100)  null,
+    championships_won int default 0 null,
+    debut_year        int           null
+);
+
+create table films
+(
+    id       int auto_increment
+        primary key,
+    name     varchar(100) null,
+    director varchar(100) null,
+    year     int          null,
+    genere   varchar(100) null,
+    sinopsis varchar(255) null
+);

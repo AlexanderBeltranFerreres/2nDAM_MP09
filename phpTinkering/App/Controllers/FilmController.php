@@ -6,14 +6,32 @@ use App\Models\Film;
 
 class FilmController
 {
-    //funcio index
+
+    //funcio per anar a la vista del main
     public function index()
+    {
+        return view('films/index');
+    }
+
+    //funcio films
+    public function films()
     {
         //obtenim totes les pelis
         $films = Film::getAll();
 
         //pasem les pelis a la vista
-        return view('films/index', ['films' => $films]);
+        return view('films/films', ['films' => $films]);
+    }
+
+    //funcio per anar a la vista del main
+    public function info_films($id)
+    {
+        if($id!=null){
+            $film = Film::find($id);
+            return view('films/info_films', ['film' => $film]);
+        }else{
+            return view('/');
+        }
     }
 
     //funcio per anar a la vista create
@@ -32,7 +50,7 @@ class FilmController
         exit;
     }
 
-    //funcio per a la vista edit
+   //funcio per a la vista edit
     public function edit($id)
     {
         //si no ens passen la id fem redirect

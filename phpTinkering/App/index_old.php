@@ -4,16 +4,16 @@ use Core\App;
 
 $greeting = "Hello";
 
-$a = 3;
-$b = 2;
-//                $films = [
-//                        "Dune",
-//                        "Star Wars",
-//                        "Blade Runner 2049",
-//                        "Mad Max: Fury road",
-//                        "Avatar",
-//                        "2001: a space odyssey"
-//                ];
+    $a = 3;
+    $b = 2;
+    //                $films = [
+    //                        "Dune",
+    //                        "Star Wars",
+    //                        "Blade Runner 2049",
+    //                        "Mad Max: Fury road",
+    //                        "Avatar",
+    //                        "2001: a space odyssey"
+    //                ];
 //    $films = [
 //        [
 //            "name" => "Dune",
@@ -43,8 +43,8 @@ $b = 2;
 //    ];
 //    var_dump($films);
 //
-//consultem els registres de la taula films de la bd utilitzant App
-$films = App::get('database')->selectAll('films');
+    //consultem els registres de la taula films de la bd utilitzant App
+    $films = App::get('database')->selectAll('films');
 
 //    function filterByDirector($films, $director) {
 //        $filteredDirectors = [];
@@ -70,5 +70,5 @@ $films = App::get('database')->selectAll('films');
 //        return $film["year"] >= 2010 && $film["year"] <= 2020;
 //    });
 
-//cridem a la vista
-require '../resources/views/index.blade.php';
+    //cridem a la vista
+    require '../resources/views/films.blade.php';

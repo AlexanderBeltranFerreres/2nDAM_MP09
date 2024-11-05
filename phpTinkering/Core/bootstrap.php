@@ -1,8 +1,6 @@
 <?php
 //bootstrap es responsable de configurar i inicialitzar l'entorn de l'aplicació.
 //carregar les configuracions, inicialitzar dependències com la base de dades i el router
-require __DIR__ . '/../vendor/autoload.php';
-
 
 use Dotenv\Dotenv; //carregar les variables d'entorn
 use Core\App; //importar contenidor de dependències
