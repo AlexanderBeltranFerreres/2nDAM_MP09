@@ -14,7 +14,7 @@
 <x-navbar />
 <div class="pelicules-container">
     <h1 class="pelicules-title">Crear Nova Pel·lícula</h1>
-    <form class="form-create-pelicules" action="/pelicules" method="POST">
+    <form class="form-create-pelicules" action="{{ route('crearPeli') }}" method="POST">
         @csrf
         <div class="form-secc-pelis">
             <label for="Titol">Títol:</label>
@@ -45,7 +45,7 @@
         </div>
         <div class="form-secc-pelis">
             <button type="submit" class="btn btn-primary">Guardar</button>
-            <a href="/pelicules" class="btn btn-secondary">Cancel·lar</a>
+            <a href="{{ route('pelicules.index') }}" class="btn btn-secondary">Cancel·lar</a>
         </div>
     </form>
 </div>

@@ -16,7 +16,7 @@
     <h1 class="pelicules-title">Gestió de Pel·lícules</h1>
 
     <div class="pelicules-actions">
-        <a href="/pelicules/create" class="btn btn-primary pelicules-create-btn">Crear Nova Pel·lícula</a>
+        <a href="{{ route('crearPeli') }}" class="btn btn-primary pelicules-create-btn">Crear Nova Pel·lícula</a>
     </div>
 
     <table class="pelicules-table">
