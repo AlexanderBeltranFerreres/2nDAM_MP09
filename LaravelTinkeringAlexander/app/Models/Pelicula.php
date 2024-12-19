@@ -1,8 +1,4 @@
 <?php
-/*
- * Made by: Alexander Beltran
- * Date: 14/03/2021
- * */
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;

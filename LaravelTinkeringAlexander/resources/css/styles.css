@@ -324,3 +324,88 @@ body {
     transform: scale(1.05);
 }
 /*FI ESTILS CRUDS*/
+
+/*ESTILS FORMULARI*/
+.pelicules-container {
+    background: linear-gradient(to bottom, #e0f7fa, #b3e5fc); /* Blau gel amb degradat */
+    border: 2px solid #81d4fa; /* Borde blau suau */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra lleugera */
+    padding: 2rem;
+    border-radius: 15px; /* Corners arrodonits */
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: 'Figtree', sans-serif;
+    min-height: 72vh;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Camp del formulari */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Etiqueta del camp */
+label {
+    font-weight: bold;
+    color: #0277bd; /* Blau profund */
+}
+
+/* Entrada de text */
+input[type="text"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #81d4fa;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #01579b; /* Blau profund */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra lleugera */
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Botons de control de formulari */
+button[type="submit"], .btn {
+    background-color: #0288d1; /* Blau gelat */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button[type="submit"]:hover, .btn:hover {
+    background-color: #81d4fa; /* Blau més clar al passar el ratolí */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra per donar volum */
+}
+
+.cancel-btn {
+    background-color: #d32f2f; /* Vermell gelat */
+    margin-left: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #e57373; /* Vermell més clar al passar el ratolí */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra per donar volum */
+}
+/*FI ESTILS FORMULARI*/
