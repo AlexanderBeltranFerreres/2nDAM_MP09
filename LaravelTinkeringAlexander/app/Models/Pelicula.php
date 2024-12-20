@@ -9,19 +9,8 @@ class Pelicula extends Model
     use HasFactory;
 
     protected $table = 'Pelicules';
-
-    protected $fillable = ['Titol', 'Any', 'Genere', 'Sinopsion', 'Director'];
-
-    public static function create(array $array)
-    {
-        return self::create([
-            'Titol' => $data['Titol'],
-            'Any' => $data['Any'],
-            'Genere' => $data['Genere'],
-            'Sinopsi' => $data['Sinopsi'],
-            'Director' => $data['Director'],
-        ]);
-    }
+    protected $fillable = ['Titol', 'Any', 'Genere', 'Sinopsis', 'Director'];
+    public $timestamps = false;
 
 
 }

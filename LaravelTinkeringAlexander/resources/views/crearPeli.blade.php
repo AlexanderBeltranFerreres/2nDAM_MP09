@@ -36,8 +36,8 @@
             </select>
         </div>
         <div class="form-secc-pelis">
-            <label for="Sinopsi">Sinopsi:</label>
-            <textarea id="Sinopsi" name="Sinopsi" rows="5" required></textarea>
+            <label for="Sinopsis">Sinopsis:</label>
+            <textarea id="Sinopsis" name="Sinopsis" rows="5" required></textarea>
         </div>
         <div class="form-secc-pelis">
             <label for="Director">Director:</label>
