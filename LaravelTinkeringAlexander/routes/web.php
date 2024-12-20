@@ -12,6 +12,12 @@ Route::get('/pelicules', [PeliculesController::class, 'getAll'])->name('pelicule
 Route::get('/crearPeli', [PeliculesController::class, 'createPeli'])->name('crearPeli'); // Mostra el formulari
 Route::post('/crearPeli', [PeliculesController::class, 'createPeli']); // Guarda una nova peli
 
+Route::get('/pelicules/{id}/modificarPeli', [PeliculesController::class, 'editPeli'])->name('editarPeli'); // Mostra les antigues dades
+Route::put('/pelicules/{id}/modificarPeli', [PeliculesController::class, 'editPeli']); // Guarda les noves dades
+
+Route::delete('/pelicules/{id}', [PeliculesController::class, 'destroy'])->name('pelicules.destroy');
+
+
 Route::get('/regals', function () {
     return view('regals');
 });

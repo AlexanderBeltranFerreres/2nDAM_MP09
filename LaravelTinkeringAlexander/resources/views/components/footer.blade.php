@@ -7,7 +7,7 @@
         <span class="snowflake">❄</span>
         <span class="snowflake">❄</span>
 
-        <p class="text-xl font-bold">🎄 Bones Festes de part de La Meva Aplicació! 🎅</p>
-        <p>&copy; {{ date('Y') }} La meva aplicació. Tots els drets reservats.</p>
+        <p class="text-xl font-bold">🎄 Bones Festes de part de Alexander! 🎅</p>
+        <p>&copy; {{ date('Y') }} Alexander Beltran Ferreres. Tots els drets reservats.</p>
     </div>
 </footer>

@@ -45,7 +45,7 @@ class PeliculesController extends Controller
 
         // Si el mètode és GET, mostra el formulari amb lo de BD
         if ($request->isMethod('get')) {
-            return view('editarPeli', ['pelicula' => $pelicula]);
+            return view('modificarPeli', ['pelicula' => $pelicula]);
         }
 
         // Si el mètode és PUT, valida i actualitza les dades
@@ -68,6 +68,26 @@ class PeliculesController extends Controller
             ]);
             // Redirigeix a la llista de pel·lícules amb un missatge d'èxit
             return redirect()->route('pelicules.index')->with('success', 'Pel·lícula modificada amb èxit!');
+        }
+        // Si no es compleixen les condicions, retorna un error
+        abort(405, 'La manera de fer la petició no és correcta');
+    }
+
+    public function destroy($id)
+    {
+        $pelicula = Pelicula::findOrFail($id);
+        $pelicula->delete();
+
+        return redirect()->route('pelicules.index')->with('success', 'Pel·lícula eliminada amb èxit');
+    }
+
+    public function listPeli(Request $request, $id)
+    {
+        $pelicula = Pelicula::findOrFail($id);
+
+        // Si el mètode és GET, mostra el formulari amb lo de BD
+        if ($request->isMethod('get')) {
+            return view('veurePeli', ['pelicula' => $pelicula]);
         }
         // Si no es compleixen les condicions, retorna un error
         abort(405, 'La manera de fer la petició no és correcta');

@@ -14,7 +14,7 @@
 <x-navbar />
 <div class="pelicules-container">
     <h1 class="pelicules-title">Modificar Pel·lícula</h1>
-    <form class="form-create-pelicules" action="{{ route('modificarPeli', ['id' => $pelicula->id]) }}" method="POST">
+    <form class="form-create-pelicules" action="{{ route('editarPeli', ['id' => $pelicula->id]) }}" method="POST">
         @csrf
         @method('PUT') <!-- Per especificar que és una modificacip de BD -->
         <div class="form-secc-pelis">
