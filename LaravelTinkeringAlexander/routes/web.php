@@ -17,6 +17,7 @@ Route::put('/pelicules/{id}/modificarPeli', [PeliculesController::class, 'editPe
 
 Route::delete('/pelicules/{id}', [PeliculesController::class, 'destroy'])->name('pelicules.destroy');
 
+Route::get('/pelicules/{id}/veurePeli', [PeliculesController::class, 'listPeli'])->name('veurePeli'); // Mostra les antigues dades
 
 Route::get('/regals', function () {
     return view('regals');

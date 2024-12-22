@@ -12,5 +12,4 @@ class Pelicula extends Model
     protected $fillable = ['Titol', 'Any', 'Genere', 'Sinopsis', 'Director'];
     public $timestamps = false;
 
-
 }

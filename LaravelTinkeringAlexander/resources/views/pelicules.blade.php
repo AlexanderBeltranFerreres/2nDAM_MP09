@@ -36,7 +36,7 @@
                 <td class="pelicules-cell">{{ $pelicula->Genere }}</td>
                 <td class="pelicules-cell pelicules-actions-cell">
                     <a href="{{ route('editarPeli', ['id' => $pelicula->id]) }}" class="btn btn-secondary">Modificar</a>
-                    <a href="/pelicules/{{ $pelicula->id }}" class="btn btn-info">Veure</a>
+                    <a href="{{route('veurePeli', ['id'=> $pelicula->id ]) }}" class="btn btn-info">Veure</a>
                     <form action="/pelicules/{{ $pelicula->id }}" method="POST" class="pelicules-delete-form">
                         @csrf
                         @method('DELETE')
