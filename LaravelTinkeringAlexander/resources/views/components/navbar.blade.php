@@ -9,7 +9,7 @@
         <ul class="navbar-links">
             <li><a href="/" class="link">Home</a></li>
             <li><a  href="{{ route('pelicules.index') }}" class="link">Pelicules</a></li>
-            <li><a  class="link">Regals</a></li>
+            <li><a  href="{{ route('regals.index') }}" class="link">Regals</a></li>
         </ul>
     </div>
 </nav>

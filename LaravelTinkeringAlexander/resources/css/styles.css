@@ -409,3 +409,46 @@ button[type="submit"]:hover, .btn:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra per donar volum */
 }
 /*FI ESTILS FORMULARI*/
+
+.info-pelicula {
+    margin-top: 20px;
+    background-color: #E5E5E5; /* Fons gelat */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Element de cada item d'informació */
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item strong {
+    font-size: 18px;
+    color: #4E4B40; /* Color de la fusta / terreny */
+}
+
+.info-item span, .info-item p {
+    font-size: 16px;
+    color: #5A5A5A;
+}
+
+/* Adaptació a dispositius mòbils */
+@media (max-width: 768px) {
+    .pelicules-container {
+        padding: 15px;
+    }
+
+    .pelicules-title {
+        font-size: 28px;
+    }
+
+    .info-item {
+        font-size: 14px;
+    }
+
+    .actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

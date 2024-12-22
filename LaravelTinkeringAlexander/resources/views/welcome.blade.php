@@ -22,7 +22,7 @@
                     </p>
                     <div class="button-container">
                         <a  href="{{ route('pelicules.index') }}" class="btn pelicules-btn">Pelicules</a>
-                        <a  class="btn altres-btn">Regals</a>
+                        <a  href="{{ route('regals.index') }}" class="btn altres-btn">Regals</a>
                     </div>
                 </main>
             </div>
